@@ -15,9 +15,16 @@ export default function ErrorTemplate({
   return (
     <div className="min-h-screen flex flex-col items-center justify-center  dark:bg-gray-900 px-6 text-center">
       {ImagenError && (
-        <div>
+        <div
+          className="
+            text-gray-900 
+            dark:text-white 
+            [--svg-secondary:#f7f7f7] 
+            dark:[--svg-secondary:#101828]
+        "
+        >
           <ImagenError
-            className={clsx(imagenSize, "text-gray-900 dark:text-white mb-6")}
+            className={clsx(imagenSize, "mb-6")}
             aria-label={altImagenError}
             role="img"
           />
