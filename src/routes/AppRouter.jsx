@@ -1,7 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Error404Page from "../pages/errors/Error404Page";
-import Error403Page from "../pages/errors/Error403Page";
 import Error500Page from "../pages/errors/Error500Page";
+import Header from "./../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import Hero from "./../components/Hero";
+import SobreMi from "../components/SobreMi";
 
 const AppRouter = () => {
   return (
@@ -9,7 +12,12 @@ const AppRouter = () => {
       <Route
         path="/"
         element={
-          <h1 className="text-4xl font-bold text-blue-500">HOLA MUNDOOO</h1>
+          <>
+            <Header />
+            <Hero />
+            <SobreMi />
+            <Footer />
+          </>
         }
       />
       <Route path="*" element={<Error404Page />} />

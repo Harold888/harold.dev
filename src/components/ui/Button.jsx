@@ -12,49 +12,39 @@ export default function Button({
   ...props
 }) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition " +
-    "disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 " +
+    "disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 " +
+    "focus:ring-offset-white dark:focus:ring-offset-[#0d1117]";
 
   const variantes = {
     primario: {
       fondo:
-        "bg-gradient-to-r from-blue-600 to-cyan-500 " +
-        "hover:from-blue-700 hover:to-cyan-600 " +
-        "focus:ring-cyan-400 " +
-        "dark:from-blue-800 dark:to-indigo-700 " +
-        "dark:hover:from-blue-900 dark:hover:to-indigo-800 " +
-        "dark:focus:ring-indigo-500 dark:focus:ring-offset-slate-950",
+        "bg-gradient-to-r from-cyan-500 to-cyan-400 " +
+        "hover:from-cyan-600 hover:to-cyan-500 " +
+        "focus:ring-cyan-400",
       texto: "text-white",
     },
 
     secundario: {
       fondo:
-        "bg-gradient-to-r from-gray-200 to-gray-100 " +
-        "hover:from-gray-300 hover:to-gray-200 " +
-        "focus:ring-gray-400 " +
-        "dark:from-slate-800 dark:to-slate-700 " +
-        "dark:hover:from-slate-700 dark:hover:to-slate-600 " +
-        "dark:focus:ring-gray-500 dark:focus:ring-offset-slate-950",
-      texto: "text-gray-900 dark:text-gray-100",
+        "bg-gray-200 hover:bg-gray-300 " +
+        "dark:bg-white/10 dark:hover:bg-white/20 " +
+        "focus:ring-gray-400",
+      texto: "text-gray-900 dark:text-white",
     },
 
     peligro: {
       fondo:
         "bg-gradient-to-r from-red-600 to-rose-500 " +
         "hover:from-red-700 hover:to-rose-600 " +
-        "focus:ring-rose-400 " +
-        "dark:from-red-700 dark:to-rose-600 " +
-        "dark:hover:from-red-800 dark:hover:to-rose-700 " +
-        "dark:focus:ring-red-500 dark:focus:ring-offset-slate-950",
+        "focus:ring-rose-400",
       texto: "text-white",
     },
 
     fantasma: {
       fondo:
-        "bg-gradient-to-r from-transparent to-transparent " +
-        "hover:from-gray-100 hover:to-gray-200 " +
-        "dark:hover:from-slate-800 dark:hover:to-slate-700 " +
-        "focus:ring-gray-300 dark:focus:ring-gray-600 dark:focus:ring-offset-slate-950",
+        "bg-transparent hover:bg-gray-100 dark:hover:bg-white/5 " +
+        "focus:ring-gray-300 dark:focus:ring-gray-600",
       texto: "text-gray-900 dark:text-gray-100",
     },
   };
@@ -70,7 +60,7 @@ export default function Button({
         base,
         estilosVariantes.fondo,
         estilosVariantes.texto,
-        className,
+        className
       )}
       {...props}
     >

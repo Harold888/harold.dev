@@ -13,15 +13,15 @@ export default function ErrorTemplate({
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center  dark:bg-gray-900 px-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-[#0d1117] px-6 text-center transition-colors">
       {ImagenError && (
         <div
           className="
             text-gray-900 
-            dark:text-white 
+            dark:text-white
             [--svg-secondary:#f7f7f7] 
             dark:[--svg-secondary:#101828]
-        "
+          "
         >
           <ImagenError
             className={clsx(imagenSize, "mb-6")}
@@ -32,16 +32,16 @@ export default function ErrorTemplate({
       )}
 
       {codigo && (
-        <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 dark:text-gray-200 mb-2">
+        <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-2">
           {codigo}
         </h1>
       )}
 
-      <h2 className="md:text-2xl 2xl:text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-3">
+      <h2 className="md:text-2xl 2xl:text-4xl font-semibold text-gray-900 dark:text-white mb-3">
         {tituloError}
       </h2>
 
-      <p className="text-gray-500 dark:text-gray-300 max-w-md mb-6 2xl:text-lg">
+      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6 2xl:text-lg">
         {textoError}
       </p>
 
@@ -52,7 +52,7 @@ export default function ErrorTemplate({
       </div>
 
       {codigo && (
-        <p className="text-sm text-gray-400 dark:text-gray-500 mt-6">
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">
           Código de error: {codigo}
         </p>
       )}
