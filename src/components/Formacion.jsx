@@ -15,7 +15,7 @@ const EDUCACION = [
     institucion: "Corporación Unificada Nacional – CUN",
     periodo: "2022 - 2026",
     descripcion:
-      "Formación en curso. Profundizando en arquitecturas de software, estructuras de datos y fundamentos de ingeniería aplicados al desarrollo web.",
+      "Profundizando en arquitecturas de software, estructuras de datos y fundamentos de ingeniería aplicados al desarrollo web.",
     icono: FiMonitor,
     colorIcono: "text-cyan-500 bg-cyan-500/10",
   },
