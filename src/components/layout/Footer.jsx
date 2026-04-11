@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  FiGithub,
-  FiLinkedin,
-  FiTwitter,
-  FiMail,
-} from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
 
 const SOCIAL_LINKS = [
   {
@@ -14,17 +9,12 @@ const SOCIAL_LINKS = [
   },
   {
     icon: <FiLinkedin className="w-4 h-4" />,
-    href: "https://linkedin.com/in/tu-perfil",
+    href: "https://www.linkedin.com/in/harold-andrey-ramirez-munoz-977545138",
     label: "LinkedIn",
   },
   {
-    icon: <FiTwitter className="w-4 h-4" />,
-    href: "https://twitter.com/tu-perfil",
-    label: "Twitter",
-  },
-  {
     icon: <FiMail className="w-4 h-4" />,
-    href: "mailto:tu@email.com",
+    href: "mailto:people_harold88@hotmail.com",
     label: "Email",
   },
 ];
@@ -34,11 +24,8 @@ const CURRENT_YEAR = new Date().getFullYear();
 export default function Footer() {
   return (
     <footer className="bg-white dark:bg-[#0d1117] border-t border-gray-200 dark:border-white/5 transition-colors">
-
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 gap-6 md:gap-0">
-
           <div>
             <a
               href="#inicio"
@@ -48,7 +35,7 @@ export default function Footer() {
             </a>
 
             <p className="text-sm text-gray-600 dark:text-gray-500 mt-1">
-              Frontend Developer & UI Designer
+              FullStack Developer
             </p>
           </div>
 
@@ -76,7 +63,6 @@ export default function Footer() {
               </motion.a>
             ))}
           </div>
-
         </div>
 
         <div className="border-t border-gray-200 dark:border-white/5" />
@@ -85,12 +71,12 @@ export default function Footer() {
           <p className="text-sm text-gray-600 dark:text-gray-500">
             © {CURRENT_YEAR} Todos los derechos reservados.
             <span className="text-gray-700 dark:text-gray-400">
-              {" "}Diseñado y desarrollado con{" "}
+              {" "}
+              Diseñado y desarrollado con{" "}
               <span className="text-cyan-500 dark:text-cyan-400">pasión</span>.
             </span>
           </p>
         </div>
-
       </div>
     </footer>
   );

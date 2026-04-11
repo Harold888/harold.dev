@@ -1,7 +1,6 @@
-
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiCoffee } from "react-icons/fi";
-import Button from './ui/Button';
+import { FiGithub, FiLinkedin, FiCoffee, FiMail } from "react-icons/fi";
+import Button from "./ui/Button";
 
 export default function Hero() {
   return (
@@ -18,7 +17,6 @@ export default function Hero() {
       overflow-hidden
       "
     >
-      {/* Glow background */}
       <div
         className="
         absolute inset-0
@@ -29,8 +27,6 @@ export default function Hero() {
       />
 
       <div className="relative max-w-4xl mx-auto">
-
-        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,10 +42,9 @@ export default function Hero() {
           mb-6
           "
         >
-          👋 ¡Hola! Bienvenido a mi espacio
+          👋 ¡Bienvenido a mi portafolio!
         </motion.div>
 
-        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +55,7 @@ export default function Hero() {
           leading-tight
           "
         >
-          Soy{" "}
+          Harold{" "}
           <span
             className="
             bg-gradient-to-r
@@ -72,11 +67,9 @@ export default function Hero() {
             animate-pulse
             "
           >
-            Harold
+            Ramirez
           </span>
         </motion.h1>
-
-        {/* Subtitle */}
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -88,10 +81,8 @@ export default function Hero() {
           mt-4
           "
         >
-          Frontend Developer & UI Designer
+          FullStack Developer
         </motion.h2>
-
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -103,40 +94,46 @@ export default function Hero() {
           text-lg
           "
         >
-          Me apasiona crear interfaces modernas, accesibles y rápidas.
-          Disfruto construir experiencias web que combinan diseño,
-          rendimiento y buenas prácticas de desarrollo.
+          Me apasiona crear interfaces modernas, accesibles y rápidas. Ayudo a
+          empresas y emprendedores a construir productos digitales
+          excepcionales. Combino experiencia en frontend y backend para
+          desarrollar soluciones web completas, desde la idea hasta el
+          despliegue, siempre priorizando la calidad y las buenas prácticas de
+          desarrollo.
         </motion.p>
 
-        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
           className="flex flex-wrap justify-center gap-4 mt-8"
         >
-          <Button variante="primario">
-            Conóceme →
-          </Button>
+          <Button variante="primario">Conóceme →</Button>
 
-          <Button variante="secundario">
-            Ver mis proyectos
-          </Button>
+          <Button variante="secundario">Ver mis proyectos</Button>
         </motion.div>
 
-        {/* Social Icons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
           className="flex justify-center gap-6 mt-10"
         >
-          {[FiGithub, FiLinkedin, FiCoffee].map((Icon, i) => (
+          {[
+            { Icon: FiGithub, href: "https://github.com/Harold888" },
+            {
+              Icon: FiLinkedin,
+              href: "https://www.linkedin.com/in/harold-andrey-ramirez-munoz-977545138",
+            },
+            { Icon: FiMail, href: "mailto:people_harold88@hotmail.com" },
+          ].map(({ Icon, href }, i) => (
             <motion.a
               key={i}
               whileHover={{ scale: 1.15, y: -3 }}
               whileTap={{ scale: 0.9 }}
-              href="#"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="
               w-11 h-11
               flex items-center justify-center
@@ -153,7 +150,6 @@ export default function Hero() {
             </motion.a>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+
           <a
             href="#inicio"
             className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors tracking-tight"
@@ -36,7 +36,6 @@ export default function Header() {
             Harold<span className="text-gray-900 dark:text-white">.dev</span>
           </a>
 
-          {/* NAV DESKTOP */}
           <nav className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <a
@@ -56,9 +55,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* ACTIONS */}
           <div className="flex items-center gap-3">
-            {/* THEME BUTTON */}
+
             <motion.button
               onClick={toggleTheme}
               whileTap={{ scale: 0.85, rotate: 20 }}
@@ -78,8 +76,6 @@ export default function Header() {
                 <HiMoon className="w-5 h-5 text-cyan-400" />
               )}
             </motion.button>
-
-            {/* BOTON CONTACTO */}
             <a
               href="#contacto"
               className="
@@ -97,7 +93,6 @@ export default function Header() {
               Hablemos
             </a>
 
-            {/* MOBILE MENU BUTTON */}
             <button
               onClick={() => setMenuOpen((p) => !p)}
               aria-label="Menú"
@@ -119,7 +114,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MOBILE NAV */}
       <AnimatePresence>
         {menuOpen && (
           <motion.nav

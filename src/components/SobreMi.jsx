@@ -1,7 +1,6 @@
-
 import { motion } from "framer-motion";
 import { FiServer, FiCode, FiBookOpen, FiHeart } from "react-icons/fi";
-import Button from './ui/Button';
+import Button from "./ui/Button";
 
 const CARDS = [
   {
@@ -38,10 +37,7 @@ export default function SobreMi() {
       "
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-
-        {/* TEXTO */}
         <div>
-
           <span className="text-sm text-cyan-500 dark:text-cyan-400 font-medium tracking-widest">
             // SOBRE MÍ
           </span>
@@ -56,37 +52,29 @@ export default function SobreMi() {
             "
           >
             Un poco sobre{" "}
-            <span className="text-cyan-500 dark:text-cyan-400">
-              quién soy
-            </span>
+            <span className="text-cyan-500 dark:text-cyan-400">quién soy</span>
           </h2>
 
           <div className="space-y-6 mt-8 text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-
             <p>
-              ¡Hola! 👋 Soy un desarrollador apasionado por crear
-              aplicaciones web modernas y eficientes. Lo que comenzó
-              como curiosidad por cómo funcionan las cosas se convirtió
-              en mi camino profesional.
+              ¡Hola! 👋 Soy un desarrollador apasionado por crear aplicaciones
+              web modernas y eficientes. Lo que comenzó como curiosidad por cómo
+              funcionan las cosas se convirtió en mi camino profesional.
             </p>
 
             <p>
-              Me encanta resolver problemas y construir experiencias
-              digitales que sean rápidas, accesibles y agradables para
-              los usuarios.
+              Me encanta resolver problemas y construir experiencias digitales
+              que sean rápidas, accesibles y agradables para los usuarios.
             </p>
 
             <p>
-              Cuando no estoy programando probablemente estoy leyendo
-              sobre nuevas tecnologías, jugando videojuegos o tomando
-              demasiado café ☕
+              Cuando no estoy programando probablemente estoy leyendo sobre
+              nuevas tecnologías, jugando videojuegos o tomando demasiado café
+              ☕
             </p>
-
           </div>
 
-          {/* TAGS */}
           <div className="flex flex-wrap gap-3 mt-8">
-
             <span className="px-4 py-1.5 rounded-full text-sm border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">
               🎮 Gaming
             </span>
@@ -98,22 +86,16 @@ export default function SobreMi() {
             <span className="px-4 py-1.5 rounded-full text-sm border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">
               📚 Lectura Tech
             </span>
-
           </div>
 
-          {/* BOTON */}
           <div className="mt-8">
-            <Button
-             variante="primario">
-              Descargar mi CV ↓
-            </Button>
+            <a href="/Harold_Ramirez.pdf" download>
+              <Button variante="primario">Descargar mi CV ↓</Button>
+            </a>
           </div>
-
         </div>
 
-        {/* CARDS */}
         <div className="grid sm:grid-cols-2 gap-6">
-
           {CARDS.map((card, i) => {
             const Icon = card.icon;
 
@@ -153,9 +135,7 @@ export default function SobreMi() {
               </motion.div>
             );
           })}
-
         </div>
-
       </div>
     </section>
   );
