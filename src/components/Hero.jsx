@@ -108,9 +108,13 @@ export default function Hero() {
           transition={{ delay: 0.7 }}
           className="flex flex-wrap justify-center gap-4 mt-8"
         >
-          <Button variante="primario">Conóceme →</Button>
+          <a href="#sobre-mi">
+            <Button variante="primario">Conóceme →</Button>
+          </a>
 
-          <Button variante="secundario">Ver mis proyectos</Button>
+          <a href="#proyectos">
+            <Button variante="secundario">Ver mis proyectos</Button>
+          </a>
         </motion.div>
 
         <motion.div
