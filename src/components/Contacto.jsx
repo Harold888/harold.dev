@@ -15,8 +15,8 @@ const INFO = [
   {
     icono: FiMail,
     label: "Email",
-    valor: "harold88@hotmail.com",
-    href: "mailto:harold88@hotmail.com",
+    valor: "people_harold88@hotmail.com",
+    href: "mailto:people_harold88@hotmail.com",
     color: "text-cyan-500 bg-cyan-500/10",
   },
   {
@@ -73,7 +73,7 @@ export default function Contacto() {
     const body = encodeURIComponent(
       `Hola Harold,\n\nMe pongo en contacto desde tu portafolio.\n\nNombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`
     );
-    window.location.href = `mailto:harold88@hotmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:people_harold88@hotmail.com?subject=${subject}&body=${body}`;
     setEnviado(true);
     setTimeout(() => setEnviado(false), 4000);
   };
